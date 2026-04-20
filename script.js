@@ -1,9 +1,10 @@
 const params = new URLSearchParams(window.location.search);
 const eventoPassado = (params.get("evento") || "indefinido").toLowerCase();
 
-// Usa a API local por padrao quando o frontend e a API estao no mesmo projeto.
-// Em producao, voce pode sobrescrever com window.KAZZA_API_ENDPOINT.
-const API_ENDPOINT = window.KAZZA_API_ENDPOINT || "api/feedback.php";
+// API PHP hospedada no subdominio usado pelo frontend do Netlify.
+const API_ENDPOINT =
+  window.KAZZA_API_ENDPOINT ||
+  "https://treinamentos.kazzapersianas.com.br/apifeedback/feedback.php";
 
 document.querySelectorAll(".grupo-radios").forEach((grupo) => {
   const radios = grupo.querySelectorAll('input[type="radio"]');

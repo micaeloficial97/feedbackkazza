@@ -1,5 +1,6 @@
 arquivos_auxiliares/
 api/config.php
+apifeedback/config.php
 .env
 *.log
 *.csv
