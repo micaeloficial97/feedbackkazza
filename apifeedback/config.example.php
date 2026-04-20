@@ -9,6 +9,7 @@ return [
     'DB_CHARSET' => 'utf8mb4',
 
     // Separe multiplas origens por virgula.
-    // Exemplo: https://feedbackkazza.netlify.app,https://seudominio.com
+    // Exemplo com producao e teste local:
+    // https://feedbackkazza.netlify.app,http://127.0.0.1:5500,http://localhost:5500
     'ALLOWED_ORIGINS' => 'https://feedbackkazza.netlify.app',
 ];
