@@ -1,4 +1,5 @@
 arquivos_auxiliares/
+deploy_netlify/
 api/config.php
 apifeedback/config.php
 .env
