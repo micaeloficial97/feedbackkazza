@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/*remove a formatação dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Impede rolagem horizontal e mantém dentro da tela */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Quebra texto longo (como JSON, print_r, etc.) */
+pre,
+code {
+    white-space: pre-wrap;
+    /* permite quebra de linha */
+    word-break: break-word;
+    /* quebra palavras muito grandes */
+}
+#ruim,
+#otimo {
+    color: #c6c6c1;
+}
+
+/* Ajusta tabelas e imagens para mobile */
+table,
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 4) Inputs no iOS: evite zoom ao focar */
+input,
+select,
+textarea {
+    font-size: 16px;
+}
+
+/* 5) 100vh confiável no mobile */
+.full-height {
+    min-height: 100dvh;
+    /* usa viewport dinâmica moderna (iOS/Android) */
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Define a fonte padrão como sem serifa */
+    background-color: #fff;
+    /* Define o fundo da página como branco */
+    padding: 20px;
+    /* Adiciona espaçamento interno nas bordas da página */
+}
+
+/* Centraliza todas as divs do formulário */
+form#Feedback {
+    display: flex;
+    /* Usa flexbox para o layout do formulário */
+    flex-direction: column;
+    /* Organiza os filhos em coluna */
+    align-items: center;
+    /* Centraliza os filhos horizontalmente */
+    /*justify-content: center; /* Centraliza os filhos verticalmente */
+}
+
+/* Cabeçalho fixo com fundo branco 
+.logo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;    
+    /* centraliza horizontalmente 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.img-logo {
+    height: 50px;
+    width: auto;
+    margin-left: -500px;
+    /* ajuste esse valor até alinhar com o "F" */
+.logo-container {
+    position: fixed;
+    /* fixa na tela */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* ocupa toda a largura da tela */
+    height: 10vh;
+    /* ocupa toda a altura da tela */
+
+    display: flex;
+    /* ativa flexbox */
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-items: center;
+    /* centraliza verticalmente */
+
+    background-color: white;
+    /* exemplo de fundo */
+}
+
+.logo-container img {
+
+    max-width: 80%;
+    /* Limita a largura máxima da imagem a 90% do container */
+    max-height: 80%;
+    /* Mantém a proporção original da imagem */
+}
+
+form {
+    margin-top: 80px;
+}
+
+
+legend {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 32px;
+    color: #585869;
+    letter-spacing: 0.5px;
+}
+
+legend {
+    color: #777;
+    font-weight: medium;
+    margin-bottom: 12px;
+    font-size: 14px;
+    text-align: left;
+}
+
+span {
+
+    color: #777;
+    font-weight: normal;
+    font-size: 14px;
+    align-items: left;
+}
+
+form#Feedback>div {
+    width: 100%;
+    /* Faz a div ocupar toda a largura disponível */
+    max-width: 500px;
+    /* Limita a largura máxima da div */
+    margin: 16px 0;
+    /* Espaçamento acima e abaixo de cada div */
+    display: flex;
+    /* Usa flexbox para o layout interno da div */
+    flex-direction: column;
+    /* Organiza os elementos internos em coluna */
+    /*align-items: center; /* Centraliza os elementos internos horizontalmente */
+}
+
+.grupo-radios {
+    margin-top: 15px;
+    display: flex;
+}
+
+.grupo-radios img {
+    width: 56px;
+    /* Largura do ícone */
+    height: 56px;
+    /* Altura do ícone */
+    cursor: pointer;
+    /* Mostra o cursor de clique */
+}
+
+.grupo-radios input[type="radio"] {
+    display: none;
+    /* Esconde o input radio padrão */
+}
+
+.avaliacao1 {
+    display: flex;
+    align-items: left;
+    /* 🔹 Centraliza verticalmente tudo */
+    gap: 15px;
+    /* Espaço entre textos e ícones */
+
+}
+
+.texto-avaliacao {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: normal;
+    color: #777;
+}
+
+
+
+/* Aplica destaque visual ao ícone selecionado 
+.grupo-radios input[value="3"]:checked+label img,
+.grupo-radios input[value="4"]:checked+label img,
+.grupo-radios input[value="5"]:checked+label img {
+    filter: drop-shadow(0 0 4px #0596ff);
+    
+}
+
+.grupo-radios input[value="1"]:checked+label img {
+    filter: drop-shadow(0 0 4px #6c7983);
+    /* Adiciona sombra azul ao ícone selecionado 
+}
+
+.grupo-radios input[value="2"]:checked+label img {
+    filter: drop-shadow(0 0 4px #7ba4c5);
+    /* Adiciona sombra azul ao ícone selecionado */
+
+
+.informacoesPessoais,
+.sugestao {
+    position: relative;
+    margin: 20px 0;
+}
+
+.informacoesPessoais input {
+    color: #777;
+    position: relative;
+    /* Para o label flutuar sobre o input */
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 16px;
+    border: none;
+    /*remove todas as bordas */
+    border-bottom: 2px solid #ccc;
+    /* Adiciona uma borda inferior */
+    border-radius: 6px;
+    background-color: transparent;
+    /* Torna o fundo do input transparente */
+    outline: none;
+    /* Remove o contorno padrão do navegador */
+    transition: border-bottom-color 0.3s ease;
+    /* Anima a cor da borda inferior */
+}
+.sugestao textarea {
+    color: #777;
+    position: relative;
+    /* Para o label flutuar sobre o input */
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 16px;
+    border: none;
+    /*remove todas as bordas */
+    border-bottom: 2px solid #ccc;
+    /* Adiciona uma borda inferior */
+    border-radius: 6px;
+    background-color: transparent;
+    /* Torna o fundo do input transparente */
+    outline: none;
+    /* Remove o contorno padrão do navegador */
+    transition: border-bottom-color 0.3s ease;
+    /* Anima a cor da borda inferior */
+}
+
+
+.informacoesPessoais input:focus,
+.sugestao textarea:focus {
+    border-bottom-color: rgba(0, 90, 126, 0.6);
+    /* Muda a cor da borda inferior ao focar */
+    color: #777;
+    background-color: rgba(0, 90, 126, 0.1);
+}
+.sugestao label{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold; /* Negrito */
+    text-align: left; /* Alinhamento do texto */
+    margin-bottom: 32px; /* Espaçamento inferior */
+    color: #777; /* Cor do texto */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    position: absolute;     /* Para o label flutuar sobre o input */
+    pointer-events: none; /* Desabilita eventos de ponteiro no label */
+    left: 0;
+    
+}
+
+.informacoesPessoais label {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    font-size: 16px;
+    color: #999;
+    pointer-events: none;
+    /* Desabilita eventos de ponteiro no label */
+    transition: all 0.40s ease;
+    padding: 0 4px;
+}
+
+.informacoesPessoais input:focus+label,
+.sugestao textarea:focus+label {
+    top: -8px;
+    /* Move o label para cima */
+    font-size: 12px;
+    /* Diminui o tamanho da fonte */
+    color: rgb(0, 90, 126);
+    /* Muda a cor do texto */
+    
+}
+
+.informacoesPessoais input:focus+label,
+.informacoesPessoais input:valid+label,
+.sugestao textarea:focus+label,
+.sugestao textarea:not(:placeholder-shown)+label {
+    top: -8px;
+    /* Move o label para cima */
+    font-size: 12px;
+    /* Diminui o tamanho da fonte */
+    color: rgb(0, 90, 126);
+    /* Muda a cor do texto */
+    
+}
+.avaliacao1 legend{
+    margin-bottom: -5px;
+}
+
+.avaliacao1 p {
+    color: #585869;
+    font-weight: normal;
+    font-size: 17px;
+    margin-left: 8px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.informacoesPessoais legend {
+    color: #585869;
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 8px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.topo p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    color: #777;
+    margin-left: 8px;
+    text-align: left;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #585869;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(0, 90, 126);
+    color: white;
+    padding: 10px 90px;
+    border: 2px solid white;
+    border-radius: 999px;
+    font-weight: medium;
+}
+
+label{
+    display: flex;
+    align-items: left;
+    gap: 2px;
+    color: #585869;
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 10px ;
+}
+input[type="checkbox"] {
+    accent-color: rgb(0, 90, 126);
+    margin: 5px 5px 5px 0;
+}

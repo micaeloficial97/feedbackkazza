@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,  viewport-fit=cover">
+    <title>Kazza</title>
+    <link rel="shortcut icon" type="" href="logo-reduzida.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+
+</head>
+
+<body>
+    <header class="logo-container">
+        <img src="logo.svg" alt="Logo Kazza" class="img-logo" />
+    </header>
+    <form action="" id="Feedback">
+        <div class="topo">
+            <h1>Queremos ouvir você</h1>
+            <p>Sua opinião é essencial para aprimorarmos nossos workshops.
+                As respostas são confidenciais e usadas somente para melhoria interna.
+            </p>
+
+        </div>
+
+        <div class="avaliacao1">
+            <p><b>Como você avalia sua experiência no workshop?</b></p>
+
+            <legend for="avaliacao" id="pergunta1">Conteúdo apresentado <br><span class="menor">clareza, didática e
+                    slides</span></legend>
+            <div class="grupo-radios">
+                <span class="texto-avaliacao" id="ruim">ruim</span>
+                <input type="radio" id="a1-1" name="avaliacao1" value="1">
+                <label for="a1-1">
+                    <img src="ativo1cnz.svg" alt="Muito insatisfeito">
+                </label>
+                <input type="radio" id="a1-2" name="avaliacao1" value="2">
+                <label for="a1-2">
+                    <img src="ativo2cnz.svg" alt="Insatisfeito">
+                </label>
+                <input type="radio" id="a1-3" name="avaliacao1" value="3">
+                <label for="a1-3">
+                    <img src="ativo3cnz.svg" alt="Neutro">
+                </label>
+                <input type="radio" id="a1-4" name="avaliacao1" value="4">
+                <label for="a1-4">
+                    <img src="ativo4cnz.svg" alt="Satisfeito">
+                </label>
+                <input type="radio" id="a1-5" name="avaliacao1" value="5">
+                <label for="a1-5">
+                    <img src="ativo5cnz.svg" alt="Muito satisfeito">
+                </label>
+                <span class="texto-avaliacao" id="otimo">ótimo</span>
+            </div>
+        </div>
+
+        </div>
+        <div class="avaliacao2">
+            <legend for="avaliacao2">Condução da apresentação <br><span class="menor">comunicação do apresentador e
+                    duração
+                    da
+                    apresentação</span></legend>
+            <div class="grupo-radios">
+                <span class="texto-avaliacao" id="ruim">ruim</span>
+                <input type="radio" id="a2-1" name="avaliacao2" value="1">
+                <label for="a2-1">
+                    <img src="ativo1cnz.svg" alt="Muito insatisfeito">
+                </label>
+                <input type="radio" id="a2-2" name="avaliacao2" value="2">
+                <label for="a2-2">
+                    <img src="ativo2cnz.svg" alt="Insatisfeito">
+                </label>
+                <input type="radio" id="a2-3" name="avaliacao2" value="3">
+                <label for="a2-3">
+                    <img src="ativo3cnz.svg" alt="Neutro">
+                </label>
+                <input type="radio" id="a2-4" name="avaliacao2" value="4">
+                <label for="a2-4">
+                    <img src="ativo4cnz.svg" alt="Satisfeito">
+                </label>
+                <input type="radio" id="a2-5" name="avaliacao2" value="5">
+                <label for="a2-5">
+                    <img src="ativo5cnz.svg" alt="Muito satisfeito">
+                </label>
+                <span class="texto-avaliacao" id="otimo">ótimo</span>
+            </div>
+
+        </div>
+        <div class="avaliacao3">
+            <legend for="avaliacao3">Showroom e estrutura da fábrica <br><span class="menor">organização, inovação e
+                    experiência</span></legend>
+            <div class="grupo-radios">
+                <span class="texto-avaliacao" id="ruim">ruim</span>
+                <input type="radio" id="a3-1" name="avaliacao3" value="1">
+                <label for="a3-1">
+                    <img src="ativo1cnz.svg" alt="Muito insatisfeito">
+                </label>
+                <input type="radio" id="a3-2" name="avaliacao3" value="2">
+                <label for="a3-2">
+                    <img src="ativo2cnz.svg" alt="Insatisfeito">
+                </label>
+                <input type="radio" id="a3-3" name="avaliacao3" value="3">
+                <label for="a3-3">
+                    <img src="ativo3cnz.svg" alt="Neutro">
+                </label>
+                <input type="radio" id="a3-4" name="avaliacao3" value="4">
+                <label for="a3-4">
+                    <img src="ativo4cnz.svg" alt="Satisfeito">
+                </label>
+                <input type="radio" id="a3-5" name="avaliacao3" value="5">
+                <label for="a3-5">
+                    <img src="ativo5cnz.svg" alt="Muito satisfeito">
+                </label>
+                <span class="texto-avaliacao" id="otimo">ótimo</span>
+            </div>
+        </div>
+
+        </div>
+        <div class="sugestao">
+            <textarea name="" id="inputSugestao" placeholder=""></textarea>
+            <label for="inputSugestao">Compartilhe sua ideia ou sugestão! 
+                <span>Digite aqui </span>
+            </label>
+            
+        </div>
+
+        <div class="informacoesPessoais">
+            <legend>Receba um brinde</legend>
+            <div class="informacoesPessoais">
+                <input type="text" name="nome" id="inputName" required>
+                <label for="inputName">nome</label>
+            </div>
+            <div class="informacoesPessoais">
+                <input type="text" name="telefone" id="inputTel" required>
+                <label for="inputTel">telefone</label>
+            </div>
+            <div class="informacoesPessoais">
+                <input type="email" name="email" id="inputEmail" required>
+                <label for="inputEmail">email</label>
+            </div>
+        </div>
+
+        <div class="checkbox">
+            <label for="novidades">
+                <input type="checkbox" id="novidades" name="novidades">
+                Quero receber novidades exclusivas
+
+            </label>
+        </div>
+
+        <p id="status"></p>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

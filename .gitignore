@@ -1,0 +1,8 @@
+arquivos_auxiliares/
+api/config.php
+.env
+*.log
+*.csv
+node_modules/
+.DS_Store
+Thumbs.db
