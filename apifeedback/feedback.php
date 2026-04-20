@@ -111,6 +111,7 @@ $dbName = (string) $readConfig('DB_NAME', '');
 $dbUser = (string) $readConfig('DB_USER', '');
 $dbPass = (string) $readConfig('DB_PASS', '');
 $dbCharset = (string) $readConfig('DB_CHARSET', 'utf8mb4');
+$appDebug = filter_var((string) $readConfig('APP_DEBUG', 'false'), FILTER_VALIDATE_BOOLEAN);
 
 if ($dbHost === '' || $dbName === '' || $dbUser === '') {
     respond(500, ['ok' => false, 'message' => 'Configuracao de banco incompleta.']);
@@ -149,8 +150,16 @@ try {
     ]);
 } catch (mysqli_sql_exception $exception) {
     error_log('feedback.php SQL error: ' . $exception->getMessage());
-    respond(500, ['ok' => false, 'message' => 'Falha ao gravar feedback no banco.']);
+    respond(500, [
+        'ok' => false,
+        'message' => 'Falha ao gravar feedback no banco.',
+        'debug' => $appDebug ? $exception->getMessage() : null,
+    ]);
 } catch (Throwable $exception) {
     error_log('feedback.php general error: ' . $exception->getMessage());
-    respond(500, ['ok' => false, 'message' => 'Erro interno ao processar feedback.']);
+    respond(500, [
+        'ok' => false,
+        'message' => 'Erro interno ao processar feedback.',
+        'debug' => $appDebug ? $exception->getMessage() : null,
+    ]);
 }

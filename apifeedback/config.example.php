@@ -12,4 +12,7 @@ return [
     // Exemplo com producao e teste local:
     // https://feedbackkazza.netlify.app,http://127.0.0.1:5500,http://localhost:5500
     'ALLOWED_ORIGINS' => 'https://feedbackkazza.netlify.app',
+
+    // Use true somente durante testes para ver detalhes de erro da API.
+    'APP_DEBUG' => false,
 ];
