@@ -11,6 +11,7 @@ O projeto tem um frontend estatico com formulario de avaliacao e uma API PHP sim
 - Captura o parametro `evento` pela URL, por exemplo `?evento=casacor2025`.
 - Envia os dados para uma API PHP.
 - A API valida os dados e grava na tabela `feedback_workshop`.
+- A API tambem pode listar os nomes do evento do dia para o telao de agradecimento.
 - Depois do envio com sucesso, redireciona para `agradecimento.html`.
 
 ## Estrutura principal
@@ -20,6 +21,7 @@ O projeto tem um frontend estatico com formulario de avaliacao e uma API PHP sim
 - `script.js`: logica do formulario, mascara de telefone, validacao e envio.
 - `agradecimento.html`: pagina exibida apos envio com sucesso.
 - `api/feedback.php`: endpoint backend que recebe o JSON e grava no MySQL.
+- `api/nomes.php`: endpoint backend que retorna os nomes do evento atual para o telao.
 - `api/config.example.php`: modelo de configuracao do banco e CORS.
 
 ## Configuracao da API
